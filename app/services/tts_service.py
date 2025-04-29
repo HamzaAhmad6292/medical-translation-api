@@ -15,8 +15,8 @@ class TTSService:
             # Create unique filename from user id to ensure data security
             user_hash = hashlib.md5(text.encode()).hexdigest()[:8]
             timestamp = int(time.time())
-            filename = f"translation_{user_hash}_{timestamp}.mp3"
-            filepath = Path("/tmp/audio") / filename
+            filename = f"hello1.mp3"
+            filepath = Path("app/static/audio") / filename
             
             # Generate audio
             response = self.client.text_to_speech.convert(
@@ -33,7 +33,7 @@ class TTSService:
                     f.write(chunk)
             
             # In services/tts_service.py
-            return f"https://medical-translation-api.onrender.com/tmp/audio/{filename}" 
+            return f"https://0dc8-2400-adc5-1c3-f00-2514-4b58-ded7-705.ngrok-free.app/static/audio/{filename}" 
             
         except Exception as e:
             raise RuntimeError(f"TTS generation failed: {str(e)}")
