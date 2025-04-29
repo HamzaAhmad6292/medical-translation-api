@@ -13,7 +13,7 @@ app.include_router(translation_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Specify the front end origin
+    allow_origins=["http://localhost:3000","https://nao-medical-healthcare-transcription-frontend-79am.vercel.app"],  # Specify the front end origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
