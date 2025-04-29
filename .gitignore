@@ -1,0 +1,21 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.env
+.dockerignore
+# Static files
+app/static/audio/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+./venv
+
+# Other files
+*.DS_Store

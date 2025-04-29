@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "main.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "50mb"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "main.py"
+      }
+    ],
+    "env": {
+      "GROQ_API_KEY": "@groq_api_key",
+      "ELEVENLABS_API_KEY": "@elevenlabs_api_key",
+      "WHISPER_MODEL": "whisper-large-v3-turbo",
+      "LLM_MODEL": "llama-3.3-70b-versatile",
+      "TTS_MODEL": "eleven_multilingual_v2"
+    }
+  }
